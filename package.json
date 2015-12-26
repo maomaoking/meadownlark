@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/maomaoking/meadownlark/issues"
   },
-  "homepage": "https://github.com/maomaoking/meadownlark#readme"
+  "homepage": "https://github.com/maomaoking/meadownlark#readme",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
 }
