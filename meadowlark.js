@@ -12,7 +12,14 @@ app.set('port', process.env.PORT || 3000);
 
 
 //路由开始
+//|---测试
+app.use(function (req, res, next) {
+    res.locals.showTests = app.get('env') != 'production' && req.query.test === '1';
+    next();
+});
+
 app.use(express.static(__dirname + '/public'));
+
 app.get('/', function (req, res) {
     //res.type('text/plain');
     //res.send('Meadowlark Travel');
@@ -22,7 +29,10 @@ app.get('/', function (req, res) {
 app.get('/about', function (req, res) {
     //res.type('text/plain');
     //res.send('About Meadowlark Travel');
-    res.render('about',{fortune: fortune.getFortune()});
+    res.render('about',{
+            fortune: fortune.getFortune(),
+            pageTestScript: '/qa/tests-about.js'
+    });
 });
 //404
 app.use(function (req, res) {
