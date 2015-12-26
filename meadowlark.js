@@ -2,20 +2,13 @@
  * Created by zhangyumou on 15/12/26.
  */
 var express = require('express');
+var handlebars = require('express3-handlebars').create({ defaultLayout:'main'});
+var fortune = require('./lib/fortune.js');
 
 var app = express();
-var handlebars = require('express3-handlebars').create({ defaultLayout:'main'});
 app.engine('handlebars',handlebars.engine);
 app.set('view engine', 'handlebars');
 app.set('port', process.env.PORT || 3000);
-
-var fortunes = [
-    "Conquer your fears or they will conquer you.",
-    "Rivers need springs.",
-    "Do not fear what you don't know.",
-    "You will have a pleasant surprise.",
-    "Whenever possible, keep it simple."
-];
 
 
 //路由开始
@@ -29,7 +22,7 @@ app.get('/', function (req, res) {
 app.get('/about', function (req, res) {
     //res.type('text/plain');
     //res.send('About Meadowlark Travel');
-    res.render('about');
+    res.render('about',{fortune: fortune.getFortune()});
 });
 //404
 app.use(function (req, res) {
