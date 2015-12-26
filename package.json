@@ -1,0 +1,22 @@
+{
+  "name": "meadownlark",
+  "version": "1.0.0",
+  "description": "a travel site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maomaoking/meadownlark.git"
+  },
+  "keywords": [
+    "YanYan521"
+  ],
+  "author": "maomaoking",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maomaoking/meadownlark/issues"
+  },
+  "homepage": "https://github.com/maomaoking/meadownlark#readme"
+}
