@@ -13,6 +13,7 @@ app.set('port', process.env.PORT || 3000);
 
 //路由开始
 //|---测试
+app.use(require('morgan')('dev'));
 app.use(function (req, res, next) {
     res.locals.showTests = app.get('env') != 'production' && req.query.test === '1';
     next();
