@@ -24,6 +24,7 @@
     "express": "^4.13.3",
     "express3-handlebars": "^0.5.2",
     "formidable": "^1.0.17",
+    "jquery-file-upload-middleware": "^0.1.7",
     "morgan": "^1.6.1"
   },
   "devDependencies": {
